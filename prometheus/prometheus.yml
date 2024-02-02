@@ -1,0 +1,10 @@
+#global config
+global:
+  scrape_interval:     15s
+  evaluation_interval: 5s
+# Scrape configs only contain one scrape target
+scrape_configs:
+  - job_name: 'my-app'
+    scrape_interval: 5s
+    static_configs:
+      - targets: [host.docker.internal:8000]
